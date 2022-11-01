@@ -7,7 +7,7 @@ const ApiComponent = ({link}) => {
 
   return (
     <div>
-      <a href={link}>LINK TO GOOGLE</a>
+      <a href={link}>This link is taken server side with a fetch to an API</a>
     </div>
   )
 }

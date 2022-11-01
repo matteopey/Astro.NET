@@ -1,7 +1,7 @@
 const Component = () => {
   return (
     <div>
-      <a href="https://olympics.com"></a>
+      <a href="https://olympics.com">This is a static component</a>
     </div>);
 }
 
