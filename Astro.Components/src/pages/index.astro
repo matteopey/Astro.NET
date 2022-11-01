@@ -1,11 +1,11 @@
 ---
 import ApiComponent from "../../react/ApiComponent";
-import Component from "../../react/Component";
+import StaticComponent from "../../react/StaticComponent";
 import { getLink } from "../pages/api/link";
 
 const link = await getLink();
 ---
 
-<Component />
+<StaticComponent />
 
-<ApiComponent link={link} />
+<ApiComponent client:load link={link} />

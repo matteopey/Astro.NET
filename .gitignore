@@ -1,5 +1,6 @@
 # build output
 Astro.Components/dist/
+Astro/wwwroot/astro
 .output/
 
 # dependencies
