@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Astro.Controller
 {
+    [EnableCors("CorsPolicy")]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -9,6 +12,7 @@ namespace Astro.Controller
         [HttpGet]
         public string Get()
         {
+            Console.WriteLine("Fetch");
             return "https://google.com";
         }
     }

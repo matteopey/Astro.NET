@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import PropTypes from 'prop-types';
 
-const ApiComponent = () => {
-  const [link, setLink] = useState("");
-
-  getLink().then(x => setLink(x));
+const ApiComponent = ({link}) => {
+  // const [link, setLink] = useState(null);
+  // getLink().then(x => setLink(x));
 
   return (
     <div>
@@ -12,10 +12,14 @@ const ApiComponent = () => {
   )
 }
 
-const getLink = async () => {
-  const resp = await fetch("https://localhost:5001")
-  const link = await resp.text();
-  return link;
+// const getLink = async () => {
+//   const resp = await fetch("http://localhost:5000/api/values");
+//   const link = await resp.text();
+//   return link;
+// }
+
+ApiComponent.propTypes = {
+  link: PropTypes.string
 }
 
 export default ApiComponent;
