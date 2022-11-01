@@ -1,10 +1,19 @@
 ﻿@page
+@using Astro.Services;
+
 @model IndexModel
+
+@inject ComponentHelper ComponentHelper;
+
 @{
-    ViewData["Title"] = "Home page";
+  ViewData["Title"] = "Home page";
+
+  string links = await ComponentHelper.GetHtmlAsync();
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+  <h1 class="display-4">Astro Demo</h1>
+
+  @Html.Raw(links)
+
 </div>
